@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Mohamed Gamal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#38bdf8;
+      --text:#e6eef8;
+      --muted:#9fb4c8;
+      --container:1100px;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071026 0%, #071827 100%);color:var(--text);line-height:1.5}
+    .container{max-width:var(--container);margin:0 auto;padding:28px}
+    .site-header{position:sticky;top:0;background:rgba(3,6,12,0.6);backdrop-filter:blur(6px);z-index:30;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{font-size:1rem;margin:0}
+    .nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+    .nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:center;padding-top:40px;padding-bottom:40px}
+    .hero h2{margin:0 0 10px 0;font-size:28px}
+    .btn{display:inline-block;background:var(--accent);color:var(--bg);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+    .hero-image img{width:100%;max-width:260px;border-radius:12px;border:4px solid rgba(255,255,255,0.04)}
+    .about, .projects, .skills, .contact{background:rgba(255,255,255,0.02);padding:22px;border-radius:12px;margin-top:24px}
+    .projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+    .card{background:var(--card);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .card-body{padding:12px}
+    .card .tech{font-size:13px;color:var(--muted);margin-top:8px}
+    .skills .skill{margin:12px 0}
+    .bar{background:rgba(255,255,255,0.04);height:14px;border-radius:8px;overflow:hidden}
+    .bar > div{height:100%;background:linear-gradient(90deg,var(--accent),#60a5fa);text-align:right;padding-right:8px;font-size:12px;color:#001}
+    .contact form{display:grid;gap:8px}
+    .contact input, .contact textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+    .site-footer{padding:18px 0;text-align:center;color:var(--muted);margin-top:28px}
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      .hero-image{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Mohamed Gamal | Network Security</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-text">
+        <h2>Hello, I'm Mohamed Gamal</h2>
+        <p>A passionate Network Security student with hands-on experience in analyzing threats, implementing defenses, and building resilient infrastructures.</p>
+        <a class="btn" href="#projects">View My Work</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/profile.jpg" alt="Profile Picture" />
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About Me</h3>
+      <p>Hello! I’m Mohamed, a dedicated Network Security student. My journey began with curiosity about how networks function and how vulnerabilities can be exploited, which has grown into a commitment to building secure infrastructures. I constantly develop my skills through courses, labs, and real-world projects.</p>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Projects</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/project1.jpg" alt="Project 1" />
+          <div class="card-body">
+            <h4>Network Threat Analysis</h4>
+            <p>Analyzed threats and implemented security measures to protect digital infrastructures.</p>
+            <p class="tech">Technologies: Nmap, Firewall, Vulnerability Assessment</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/project2.jpg" alt="Project 2" />
+          <div class="card-body">
+            <h4>Access Control & Security Policies</h4>
+            <p>Designed access control systems and policies to safeguard network data.</p>
+            <p class="tech">Technologies: Fortinet, Authentication</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h3>Skills</h3>
+      <div class="skill">
+        <label>Troubleshooting</label>
+        <div class="bar"><div style="width:85%">85%</div></div>
+      </div>
+      <div class="skill">
+        <label>Virtualization</label>
+        <div class="bar"><div style="width:75%">75%</div></div>
+      </div>
+      <div class="skill">
+        <label>Encryption</label>
+        <div class="bar"><div style="width:80%">80%</div></div>
+      </div>
+      <div class="skill">
+        <label>Authentication</label>
+        <div class="bar"><div style="width:70%">70%</div></div>
+      </div>
+      <div class="skill">
+        <label>Firewall</label>
+        <div class="bar"><div style="width:90%">90%</div></div>
+      </div>
+      <div class="skill">
+        <label>Vulnerability Assessment</label>
+        <div class="bar"><div style="width:80%">80%</div></div>
+      </div>
+    </section>
+
+    <section id="certificates" class="container about">
+      <h3>Certificates</h3>
+      <ul>
+        <li>CCNA – NTI (120h)</li>
+        <li>Network Security – NTI (120h)</li>
+        <li>Fortinet Network Security Training – Rowad (200h)</li>
+        <li>Adobe Photoshop – Rowad (120h)</li>
+      </ul>
+    </section>
+
+    <section id="achievements" class="container about">
+      <h3>Achievements</h3>
+      <ul>
+        <li>🥈 Second Place – Photoshop Competition (University Level)</li>
+        <li>🥇 First Place – Information Tournament</li>
+        <li>🎯 Participant – Digitopia Competition</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <form action="#" onsubmit="alert('Form disabled — please contact via email'); return false;">
+        <label>Name</label><input type="text" placeholder="Your name" required />
+        <label>Email</label><input type="email" placeholder="email@example.com" required />
+        <label>Message</label><textarea placeholder="How can I help you?" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p>Email: amrbasuni347@gmail.com</p>
+      <p>Phone: 01030284657</p>
+      <p><a href="https://www.linkedin.com/in/mohamed-elshenawy-805413260" target="_blank">LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mohamed Gamal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
